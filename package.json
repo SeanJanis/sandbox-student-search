@@ -1,0 +1,16 @@
+{
+  "name": "student_search",
+  "version": "0.0.1-2",
+  "author": "",
+  "dependencies": {
+    "geddy": "0.6.x"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.8.x"
+  },
+  "subdomain": "student-search",
+  "scripts": {
+    "start": "app.js"
+  }
+}
