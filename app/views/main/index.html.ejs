@@ -1,55 +1,87 @@
 <hr>
 <div class="hero-unit geddy-welcome-box">
-  <h1>Start your search:</h1>
-  <p><input type="text" class="form-control" placeholder="Search colleges, degrees, tech, etc. (i.e. Stanford, Computer Science, Git)" autofocus></p>
+  <h1>Start here:</h1>
+
+  <div class="input-group">
+    <!-- Search box -->
+    <span class="input-group-addon"> <span class="glyphicon glyphicon-search"></span></span>
+    <input type="text" class="form-control" ng-model="queryPerson"
+        typeahead="suggestion for suggestion in cities($viewValue)"
+        placeholder="Search colleges, degrees, tech, etc. (i.e. Stanford, Computer Science, Git)" autofocus>
+
+      <!-- Sort options box (Prettier, hidden for now since it doesn't work with AngularJS)
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort by: <span class="caret"></span></button>
+        <ul class="dropdown-menu pull-right" ng-model="orderProp">
+          <li><a href="#" onclick="changeSort('friendlyName');">Name</a></li>
+          <li><a href="#" onclick="changeSort('school');">School</a></li>
+          <li><a href="#" onclick="changeSort('degreeAbbrev');">Degree Type</a></li>
+          <li><a href="#" onclick="changeSort('degreeYear');">Graduating Year</a></li>
+        </ul>
+      </div>
+       -->
+
+  </div>
+
+  <br>
+  Sort by:
+  <select ng-model="orderProp" class="btn btn-default dropdown-toggle" name="sortByField">
+      <option value="friendlyName">Name</option>
+      <option value="school">School</option>
+      <option value="degreeAbbrev">Degree Type</option>
+      <option value="degreeYear">Graduating Year</option>
+  </select>
+
 </div>
 <hr>
 
+<!-- NOTE: Can be moved to separate / partial template as needed. -->
+<div class="row>
+    <div class="students">
+        <div ng-repeat="student in students | filter:queryPerson | orderBy:orderProp">
+            <!-- Student Row -->
+            <div class="col-xs-12 col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">{{student.friendlyName}} | {{student.school}} | {{student.degreeAbbrev}}, {{student.degreeYear}}
+                    </div>
+                    <button type="button" class="btn btn-success btn-sm">
+                        <span class="glyphicon glyphicon-star"></span> Yes
+                     </button>
+
+                    <button type="button" class="btn btn-default btn-sm">
+                       <span class="glyphicon glyphicon-folder-close"></span> No
+                    </button>
+                </div>
+                <div>
+
+                  <a class="thumbnail">
+                     <img src="{{student.picUrl}}" class="img-thumbnail" alt="<%= params.name %>">
+                  </a>
+
+                  <div class="panel-heading">
+
+                       Skills:
+                       <b ng-repeat="skill in student.skills">{{skill}}{{$last && '' || ' | '}}</b>
+                   </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="row">
-  <div class="col-xs-6 col-md-6">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title4</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-  </div>
+    <%= partial('partials/_person_example', {params: {friendlyName: 'John Smith', school: 'Stanford', degreeAbbrev: 'CS', degreeYear: 2014, picUrl: 'img/example_user_john_smith.jpg' }}); %>
+    <%= partial('partials/_person_example', {params: {friendlyName: 'Jane Smith', school: 'Harvard', degreeAbbrev: 'MBA', degreeYear: 2013, picUrl: 'img/example_user_jane_smith.jpg' }}); %>
+</div>
 
-  <div class="col-xs-6 col-md-6">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title4</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <center>...and more!</center>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-6">
-    <div class="panel panel-success">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title4</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-  </div>
 
-  <div class="col-xs-6 col-md-6">
-    <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Panel title4</h3>
-        </div>
-        <div class="panel-body">
-          Panel content
-        </div>
-      </div>
-  </div>
-</div>

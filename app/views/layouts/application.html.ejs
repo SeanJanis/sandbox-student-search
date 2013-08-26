@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app ng-controller="StudentSearchCtrl">
   <head>
     <meta charset="utf-8">
     <title>Student Search</title>
@@ -8,14 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%- styleLink('/css/bootstrap.min.css', {rel:'stylesheet'}) %>
-    <%- styleLink('/css/style.css', {rel:'stylesheet'}) %>
-    <%- styleLink('/css/bootstrap.responsive.min.css', {rel:'stylesheet'}) %>
-
-    <!-- The fav and touch icons -->
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
   <body>
     <div class="container">
@@ -30,26 +22,27 @@
           </div>
         </div>
 
-
+        <!-- index.html.ejs / Main search and results block -->
         <div class="container">
           <%- yield(); %>
         </div>
+
+        <hr>
 
         <div class="footer">
             <p>&copy; Student Search, 2013</p>
         </div>
 
     </div>
+    </body>
 
-  <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
       <!--[if lt IE 9]>
         <%- scriptLink('http://html5shim.googlecode.com/svn/trunk/html5.js', {type:'text/javascript'}) %>
       <![endif]-->
-
       <%- scriptLink('/js/jquery.min.js', {type:'text/javascript'}) %>
       <%- scriptLink('/js/bootstrap.min.js', {type:'text/javascript'}) %>
-      <%- scriptLink('/js/core/core.js', {type: 'text/javascript'}) %>
-      <!-- <%- scriptLink('/js/models/your_model.js', {type:'text/javascript'}) %> -->
-      <%- scriptLink('/js/config/init.js', {type: 'text/javascript'}) %>
-    </body>
+      <%- scriptLink('/js/angular/lib/angular.js', {type: 'text/javascript'}) %>
+      <%- scriptLink('/js/angular/app/controllers.js', {type: 'text/javascript'}) %>
 </html>
