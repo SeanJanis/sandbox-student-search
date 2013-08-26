@@ -5,12 +5,12 @@
     <ignored path="student_search.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/generate_test_students.php" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377482130159" ignored="false" />
-    <file path="/index.html.ejs" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377482347087" ignored="false" />
+    <file path="/index.html.ejs" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377485676383" ignored="false" />
     <file path="/_person.html.ejs" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377472355431" ignored="false" />
     <file path="/students.js" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377477281079" ignored="false" />
-    <file path="/application.html.ejs" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377477227814" ignored="false" />
+    <file path="/application.html.ejs" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377485029340" ignored="false" />
     <file path="/a.dummy" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377476114774" ignored="false" />
-    <file path="/controllers.js" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377480378200" ignored="false" />
+    <file path="/controllers.js" changelist="9897e636-32e6-4446-9ac6-d1b4c99e18b9" time="1377486004534" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,40 +71,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.html.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="80" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.ejs" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/index.html.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="22" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.661157">
+            <state line="75" column="22" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/angular/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="1" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+            <state line="20" column="74" selection-start="633" selection-end="633" vertical-scroll-proportion="0.41322315">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="students.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/students.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -135,10 +115,10 @@
         <option value="$PROJECT_DIR$/app/views/partials/_person_example.html.ejs" />
         <option value="$PROJECT_DIR$/config/router.js" />
         <option value="$PROJECT_DIR$/app/controllers/students.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.ejs" />
-        <option value="$PROJECT_DIR$/public/js/angular/app/controllers.js" />
         <option value="$PROJECT_DIR$/scripts/generate_test_students.php" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.ejs" />
         <option value="$PROJECT_DIR$/app/views/main/index.html.ejs" />
+        <option value="$PROJECT_DIR$/public/js/angular/app/controllers.js" />
       </list>
     </option>
   </component>
@@ -637,9 +617,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="37" selection-start="40" selection-end="53" vertical-scroll-proportion="-0.09504132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="22" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/students.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+        <state line="23" column="52" selection-start="693" selection-end="693" vertical-scroll-proportion="0.44214877">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -648,21 +642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/angular/app/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="1" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="80" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="22" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.661157">
+        <state line="20" column="74" selection-start="633" selection-end="633" vertical-scroll-proportion="0.41322315">
           <folding />
         </state>
       </provider>

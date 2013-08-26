@@ -1,37 +1,32 @@
 'use strict';
 
+var mainApp = angular.module("studentSearch", []);
+
 /* Controllers */
-var _scope;
-
-angular.module(['ui.bootstrap']);
-
-
 function StudentSearchCtrl($scope, $http) {
     //
     // If this were a real example, this would be using
     // a database/cached backend endpoint.
     //
-    _scope = $scope;
     $http.get('/students-endpoint').success(function(data) {
        $scope.students = data.result;
     });
 
     // Sort by earliest graduating year (most likely to want to a job).
+    $scope.queryPerson = "";
     $scope.orderProp = 'degreeYear';
 }
 
+// Extra filter for not showing entries when search field is empty.
+mainApp.filter("filterBlank", function(){ return function(object, query) {
+    if (!query) {
+        $('example-data').css('display', 'block');
+        return {};
+    } else {
+        $('example-data').css('display', 'none');
+        return object;
+    }
 
-/**
- * Programmatically updates the sorting order on the JSON
- * data returned for students.
- *
- * @param sortOption    JSON property to sort against
- */
-function changeSort(sortOption) {
-    _scope.orderProp = sortOption;
-    $('[name=sortByField]').val(sortOption);//To select Blue
-
-    select('sortByField').option('0');
-}
+}});
 
 StudentSearchCtrl.$inject = ['$scope', '$http'];

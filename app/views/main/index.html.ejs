@@ -38,7 +38,7 @@
 <!-- NOTE: Can be moved to separate / partial template as needed. -->
 <div class="row>
     <div class="students">
-        <div ng-repeat="student in students | filter:queryPerson | orderBy:orderProp">
+        <div ng-repeat="student in students | filterBlank:queryPerson | filter:queryPerson | orderBy:orderProp">
             <!-- Student Row -->
             <div class="col-xs-12 col-md-6">
             <div class="panel panel-info">
@@ -73,15 +73,16 @@
 </div>
 
 
-<div class="row">
-    <%= partial('partials/_person_example', {params: {friendlyName: 'John Smith', school: 'Stanford', degreeAbbrev: 'CS', degreeYear: 2014, picUrl: 'img/example_user_john_smith.jpg' }}); %>
-    <%= partial('partials/_person_example', {params: {friendlyName: 'Jane Smith', school: 'Harvard', degreeAbbrev: 'MBA', degreeYear: 2013, picUrl: 'img/example_user_jane_smith.jpg' }}); %>
-</div>
+<div id="example-data">
+    <div class="row">
+        <%= partial('partials/_person_example', {params: {friendlyName: 'John Smith', school: 'Stanford', degreeAbbrev: 'CS', degreeYear: 2014, picUrl: 'img/example_user_john_smith.jpg' }}); %>
+        <%= partial('partials/_person_example', {params: {friendlyName: 'Jane Smith', school: 'Harvard', degreeAbbrev: 'MBA', degreeYear: 2013, picUrl: 'img/example_user_jane_smith.jpg' }}); %>
+    </div>
 
-<div class="panel panel-default">
-  <div class="panel-body">
-    <center>...and more!</center>
-  </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <center>...and more!</center>
+      </div>
+    </div>
 </div>
-
 
